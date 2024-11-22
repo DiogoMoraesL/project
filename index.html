@@ -6,6 +6,7 @@
     <link href="./output.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Portfólio Pessoal</title>
 </head>
@@ -13,9 +14,9 @@
 <body class="font-oswald min-h-screen">
 
 
-    <div id="background" class="absolute top-0 left-0 w-full h-screen md:h-[70vh] shadow-2xl bg-cover bg-center transition-all duration-300 ease-in-out z-10" style="background-image: url('img/paisagem4.jpg');">
+    <div id="background" class="fixed top-0 left-0 w-full h-screen md:h-[70vh] shadow-2xl bg-cover bg-center  transition-all duration-300 ease-in-out z-10" style="background-image: url('img/paisagem4.jpg');">
     <nav id="navbar" class="fixed top-0 left-0 w-full h-[70px] z-50 flex justify-between items-center px-4 bg-transparent transition-all duration-300">
-        <div class="text-[#ff2020] text-2xl ">
+        <div class="text-[#ff2020] text-2xl " style="font-family: audiowide;">
             <a href="#home">Diogo de Moraes Lima</a>
         </div>
         <div id="menuToggle" class="md:hidden cursor-pointer bg-gray-500 bg-opacity-70 rounded p-2">
@@ -25,10 +26,10 @@
         </div>
         <div id="navMenu" class="hidden md:flex flex-col md:flex-row absolute md:relative top-[70px] md:top-0 right-0 md:right-auto bg-gray-500 bg-opacity-90 md:bg-transparent rounded w-1/4 md:w-auto transition-all duration-300 ease-in-out">
             <ul class="flex flex-col md:flex-row items-start md:items-center">
-                <li class="m-5 md:mx-5"><a href="index.html" class="text-white hover:text-[#ff2020] hover:scale-110 transition duration-200">Início</a></li>
-                <li class="m-5 md:mx-5"><a href="pages/areas.html" class="text-white hover:text-[#ff2020] hover:scale-110 transition duration-200">Áreas do Saber</a></li>
-                <li class="m-5 md:mx-5"><a href="pages/iot.html" class="text-white hover:text-[#ff2020] hover:scale-110 transition duration-200">IOT</a></li>
-                <li class="m-5 md:mx-5"><a href="pages/aboutme.html" class="text-white hover:text-[#ff2020] hover:scale-110 transition duration-200">Sobre mim</a></li>
+                <li class="m-5 md:mx-5"><a href="index.html" class="text-[#ff2020] nav-link">Início</a></li>
+                <li class="m-5 md:mx-5"><a href="pages/areas.html" class="text-white hover:text-[#ff2020] hover:scale-110 transition duration-200 nav-link">Áreas do Saber</a></li>
+                <li class="m-5 md:mx-5"><a href="pages/iot.html" class="text-white hover:text-[#ff2020] hover:scale-110 transition duration-200 nav-link">IOT</a></li>
+                <li class="m-5 md:mx-5"><a href="pages/aboutme.html" class="text-white hover:text-[#ff2020] hover:scale-110 transition duration-200 nav-link">Sobre mim</a></li>
             </ul>
         </div>
     </nav>
@@ -36,7 +37,7 @@
     <div class="absolute inset-0 backdrop-blur-sm "></div>
         <div id="introducao" class="relative z-10 flex items-center justify-center h-full">
             <div id="bemvindo">
-            <h1 id="bemvindo" class=" text-white text-4xl md:text-6xl z-2">Seja bem-vindo!</h1>
+            <h1 id="bemvindo" class=" text-white text-4xl md:text-6xl md:p-1 z-2">Seja bem-vindo!</h1>
                  <h2 class="text-white text-center pt-56 text-2xl" >Deslize para ver mais!</h2>
                  <div class="text-8xl  text-[#ff2020] flex justify-center pt-10 animate-bounce">
                      <i class='bx bx-up-arrow-alt'></i>
@@ -46,67 +47,97 @@
            </div>
         </div>
     </div>
-    
-    <div id="foto" class="relative z-0  md:mt-40 px-52 pt-40 opacity-0">
-       <div id="sobre-mim" class="mx-auto w-full bg-[#eeeeee] rounded-lg shadow-md flex flex-col md:flex-row overflow-hidden">
+    <div class="z-0 bg-gradient-to-t from-gray-500 to-white">
+    <div id="foto" class="relative z-0  md:mt-40 md:px-52 px-12 pt-40 opacity-0">
+       <div id="sobre-mim" class="mx-auto w-full bg-[#eeeeee] rounded-lg shadow-xl flex flex-col md:flex-row overflow-hidden">
           <img src="img/fotominha.png" alt="Minha foto" class="w-full md:w-2/5 object-cover rounded-t-lg md:rounded-l-lg md:rounded-tr-none">
             <div class="p-8 flex-1 bg-cover bg-center flex items-center justify-center" style="background-image: url('img/fundocard.jpg');">
               <div class="text-center">
                <h3 class="text-4xl md:text-5xl font-bold mb-4 ">Sobre mim</h3>
                <p class="text-2xl md:text-3xl mb-4 pt-16">Me chamo Diogo, fiz o Ensino Médio Técnico no Senac e irei mostrar as minhas habilidades trabalhadas.</p>
-               <a href="pages/aboutme.html" class="text-[#ff2020] text-xl md:text-2xl  inline-block pt-10">Saiba Mais</a>
+               <a href="pages/aboutme.html" class="text-[#ff2020] text-xl md:text-2xl  inline-block p-2 transition duration-500 ease-in-out hover:bg-gray-400 hover:bg-opacity-50 rounded">Saiba Mais</a>
              </div>
            </div>
         </div>
     </div>
 
+    <section class="py-12">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl text-center mb-20 pt-20">Linguagens de Programação e Frameworks usados</h2>
+            <div class="flex justify-center">
+              <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-20">
+                <div class="flex flex-col items-center p-4 ">
+                    <img src="img/html-5.png" alt="HTML Logo" class="w-20 h-20 mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800">HTML</h3>
+                    <h4 class="text-center">O HTML é o componente base da web. Isso quer dizer que ele permite a construção de websites e a inserção de novos conteúdos, como imagens e vídeos, por meio dos hipertextos.</h4>
+                </div>
+                <div class="flex flex-col items-center p-4">
+                    <img src="img/css-3.png" alt="CSS Logo" class="w-20 h-20 mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800">CSS3</h3>
+                    <h4 class="text-center">CSS é chamado de linguagem Cascading Style Sheet e é usado para estilizar elementos escritos em uma linguagem de marcação como HTML. O CSS separa o conteúdo da representação visual do site. Pense na decoração da sua página.</h4>
+                </div>
+                <div class="flex flex-col items-center p-4 ">
+                    <img src="img/js.png" alt="JavaScript Logo" class="w-20 h-20 mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800">JavaScript</h3>
+                    <h4 class="text-center">JavaScript é uma linguagem de programação que permite a você implementar itens complexos em páginas web toda vez que uma página da web faz mais do que simplesmente mostrar a você informação estática mostrando conteúdo que se atualiza em um intervalo de tempo, mapas interativos ou gráficos 2D/3D animados, etc.</h4>
+                </div>
+                <div class="flex flex-col items-center p-4 ">
+                    <img src="img/Tailwind.png" alt="Tailwind Logo" class="w-20 h-20 mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800">Tailwind</h3>
+                    <h4 class="text-center">O Tailwind CSS é um framework utilitário de CSS para a estilização de elementos HTML com classes pré-definidas. Com o Tailwind, você aplica as estilizações diretamente no HTML, o que simplifica o processo e te permite criar layouts personalizados de maneira eficiente.</h4>
+                  </div>
+               </div>
+            </div>
+        </div>
+    </section>
+
     <div id="cards" class="w-4/5 mx-auto pt-32 text-center opacity-0 px-16 md:px-0">
         <h1 class="text-3xl md:text-4xl mb-10">Áreas Trabalhadas</h1>
         <div class="flex flex-wrap justify-between">
-            <div class="w-full md:w-[30%] bg-[#eeeeee] rounded-lg shadow-md p-6 mb-8 flex flex-col justify-center items-center bg-cover bg-center" style="background-image: url('img/fundocard.jpg');">
+            <div class="w-full md:w-[30%] bg-[#eeeeee] rounded-lg shadow-xl p-6 mb-8 flex flex-col justify-center items-center bg-cover bg-center transition-transform hover:scale-105" style="background-image: url('img/fundocard.jpg');">
                 <div class="text-4xl mb-4 text-[#ff2020]">
                     <i data-lucide="calculator"></i>
                 </div>
                 <h3 class="text-xl font-bold mb-4">Matemática</h3>
                 <p class="mb-4">Descrição sobre Matemática e atividades.</p>
-                <a href="pages/areas.html" class="text-[#ff2020]">Saiba Mais</a>
+                <a href="pages/areas.html" class="text-[#ff2020] p-2 transition duration-500 ease-in-out hover:bg-gray-400 hover:bg-opacity-50 rounded">Saiba Mais</a>
             </div>
-            <div class="w-full md:w-[30%] bg-[#eeeeee] rounded-lg shadow-md p-6 mb-8 flex flex-col justify-center items-center bg-cover bg-center" style="background-image: url('img/fundocard.jpg');">
+            <div class="w-full md:w-[30%] bg-[#eeeeee] rounded-lg shadow-xl p-6 mb-8 flex flex-col justify-center items-center bg-cover bg-center transition-transform hover:scale-105" style="background-image: url('img/fundocard.jpg');">
                 <div class="text-4xl mb-4 text-[#ff2020]">
                     <i data-lucide="book-open"></i>
                 </div>
                 <h3 class="text-xl font-bold mb-4">Linguagens</h3>
                 <p class="mb-4">Descrição sobre Linguagens e atividades.</p>
-                <a href="pages/areas.html" class="text-[#ff2020]">Saiba Mais</a>
+                <a href="pages/areas.html" class="text-[#ff2020] p-2 transition duration-500 ease-in-out hover:bg-gray-400 hover:bg-opacity-50 rounded">Saiba Mais</a>
             </div>
-            <div class="w-full md:w-[30%] bg-[#eeeeee] rounded-lg shadow-md p-6 mb-8 flex flex-col justify-center items-center bg-cover bg-center" style="background-image: url('img/fundocard.jpg');">
+            <div class="w-full md:w-[30%] bg-[#eeeeee] rounded-lg shadow-xl p-6 mb-8 flex flex-col justify-center items-center bg-cover bg-center transition-transform hover:scale-105" style="background-image: url('img/fundocard.jpg');">
                 <div class="text-4xl mb-4 text-[#ff2020]">
                     <i data-lucide="wifi"></i>
                 </div>
                 <h3 class="text-xl font-bold mb-4">Internet das Coisas (IOT)</h3>
                 <p class="mb-4">Descrição sobre IOT e atividades.</p>
-                <a href="pages/areas.html" class="text-[#ff2020]">Saiba Mais</a>
+                <a href="pages/areas.html" class="text-[#ff2020] p-2 transition duration-500 ease-in-out hover:bg-gray-400 hover:bg-opacity-50 rounded">Saiba Mais</a>
             </div>
-            <div class="w-full md:w-[30%] bg-[#eeeeee] rounded-lg shadow-md p-6 mb-8 flex flex-col justify-center items-center bg-cover bg-center md:ml-[110px]" style="background-image: url('img/fundocard.jpg');">
+            <div class="w-full md:w-[30%] bg-[#eeeeee] rounded-lg shadow-xl p-6 mb-8 flex flex-col justify-center items-center bg-cover bg-center md:ml-[110px] transition-transform hover:scale-105" style="background-image: url('img/fundocard.jpg');">
                 <div class="text-4xl mb-4 text-[#ff2020]">
                     <i data-lucide="flask-conical"></i>
                 </div>
                 <h3 class="text-xl font-bold mb-4">Ciências da Natureza</h3>
                 <p class="mb-4">Descrição sobre Ciências da Natureza e atividades.</p>
-                <a href="pages/areas.html" class="text-[#ff2020]">Saiba Mais</a>
+                <a href="pages/areas.html" class="text-[#ff2020] p-2 transition duration-500 ease-in-out hover:bg-gray-400 hover:bg-opacity-50 rounded">Saiba Mais</a>
             </div>
-            <div class="w-full md:w-[30%] bg-[#eeeeee] rounded-lg shadow-md p-6 mb-8 flex flex-col justify-center items-center bg-cover bg-center md:mr-[110px]" style="background-image: url('img/fundocard.jpg');">
+            <div class="w-full md:w-[30%] bg-[#eeeeee] rounded-lg shadow-xl p-6 mb-8 flex flex-col justify-center items-center bg-cover bg-center md:mr-[110px] transition-transform hover:scale-105" style="background-image: url('img/fundocard.jpg');">
                 <div class="text-4xl mb-4 text-[#ff2020]">
                     <i data-lucide="globe"></i>
                 </div>
                 <h3 class="text-xl font-bold mb-4">Ciências Humanas</h3>
                 <p class="mb-4">Descrição sobre Ciências Humanas e atividades.</p>
-                <a href="pages/areas.html" class="text-[#ff2020]">Saiba Mais</a>
-            </div>
-        </div>
+                <a href="pages/areas.html" class="text-[#ff2020] p-2 transition duration-500 ease-in-out hover:bg-gray-400 hover:bg-opacity-50 rounded">Saiba Mais</a>
+             </div>
+          </div>
+       </div>
     </div>
-
-<footer class="text-center py-4 px-2">
+<footer class="text-center py-4 px-2 bg-black bg-opacity-20">
     © 2024 Diogo de Moraes Lima. Todos os direitos reservados.
 </footer>
 
