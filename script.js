@@ -48,52 +48,9 @@ window.addEventListener('scroll', () => {
     
 });
 
-lucide.createIcons();
 
-
-//Vai verificar a página que está, se for a mesma página do botão da navbar irá voltar para o topo suave
-document.addEventListener('DOMContentLoaded', function() {
-    const navLinks = document.querySelectorAll('.nav-link');
-    const currentPage = window.location.pathname.split('/').pop();
-
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            const href = this.getAttribute('href');
-            const isCurrentPage = href === currentPage || (currentPage === '' && href === 'index.html');
-            
-            if (isCurrentPage) {
-                e.preventDefault();
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            } else if (href.startsWith('#')) {
-                e.preventDefault();
-                const targetId = href.substring(1);
-                const targetElement = document.getElementById(targetId);
-
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80, 
-                        behavior: 'smooth'
-                    });
-                }
-            } else {
- 
-                this.href = href + (href.includes('?') ? '&' : '?') + 'scrollTop=true';
-            }
-        });
-    });
-
-
-    if (window.location.search.includes('scrollTop=true')) {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-
-        const url = new URL(window.location);
-        url.searchParams.delete('scrollTop');
-        window.history.replaceState({}, '', url);
-    }
-});
+if (typeof lucide !== 'undefined' && typeof lucide.createIcons === 'function') {
+    lucide.createIcons();
+} else {
+    console.log('Lucide icons não carregados corretamente.');
+}
